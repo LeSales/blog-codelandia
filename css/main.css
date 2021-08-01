@@ -35,6 +35,7 @@ header {
   width: 100vw;
   height: 20vh;
   background-color: var(--blue);
+  margin-bottom: 10vh;
 }
 
 header .container {
@@ -100,7 +101,7 @@ header .container .search img {
           align-items: center;
   width: 16px;
   height: 16px;
-  margin: 0 10px;
+  margin: 0 1.5rem;
 }
 
 header .container .search .search-bar {
@@ -109,9 +110,7 @@ header .container .search .search-bar {
   height: 4.5rem;
   width: 100vw;
   max-width: 980px;
-  background: url(images/search.png) no-repeat scroll 7px 7px;
   background-color: transparent;
-  padding-left: 30px;
 }
 
 header .container .search .search-bar ::-webkit-input-placeholder {
@@ -128,6 +127,83 @@ header .container .search .search-bar ::-ms-input-placeholder {
 
 header .container .search .search-bar ::placeholder {
   color: white;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .post-section {
+  max-width: 980px;
+}
+
+main .post-section .container {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 980px;
+  width: 100vw;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+main .post-section .container .top-card {
+  padding: 0 2rem;
+  max-width: 980px;
+  width: 100vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--title);
+  font-size: 1.6rem;
+}
+
+main .post-section .container h2 {
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: var(--title);
+}
+
+main .post-section .container p {
+  font-size: 1.6rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: var(--text);
+}
+
+main .post-section .container .date, main .post-section .container .icon {
+  color: var(--text);
 }
 
 span {

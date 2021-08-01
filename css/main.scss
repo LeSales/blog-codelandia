@@ -30,6 +30,7 @@ header {
     width: 100vw;
     height: 20vh;
     background-color: var(--blue);
+    margin-bottom: 10vh;
 
     .container {
         display: flex;
@@ -49,7 +50,7 @@ header {
         .search {
             display: flex;
             justify-content: center;
-                align-items: center;
+            align-items: center;
             flex-direction: row;
             background-color: #ffffff95;
             border: none;
@@ -58,13 +59,13 @@ header {
             width: 100vw;
             max-width: 980px;
 
-            img{
+            img {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 16px;
                 height: 16px;
-                margin: 0 10px;
+                margin: 0 1.5rem;
             }
 
             .search-bar {
@@ -73,13 +74,64 @@ header {
                 height: 4.5rem;
                 width: 100vw;
                 max-width: 980px;
-                background: url(images/search.png) no-repeat scroll 7px 7px;
                 background-color: transparent;
-                padding-left: 30px;
-                
-                ::placeholder{
-                    color:white;
+
+                ::placeholder {
+                    color: white;
                 }
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .post-section {
+        max-width: 980px;
+
+        .container {
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 980px;
+            width: 100vw;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 3px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            .top-card{
+            padding:0 2rem;
+            max-width: 980px;
+            width: 100vw;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--title);
+            font-size: 1.6rem;
+            }
+
+            h2{
+                font-size: 2.2rem;
+                padding: 1rem 0;
+                align-self: flex-start;
+                color: var(--title);
+            }
+
+            p{
+                font-size: 1.6rem;
+                align-self: flex-start;
+                color: var(--text);
+            }
+
+            .date, .icon{
+                color: var(--text);
             }
         }
     }
