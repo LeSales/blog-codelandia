@@ -1,14 +1,29 @@
-:root {
-    --blue: #3ea1db;
-    --blue-dark: #574ae8;
-    --white: #fff;
+//Var
+$blue: #3ea1db;
+$blue-dark: #574ae8;
+$white: #fff;
 
-    --title: #313131;
-    --text: #b6b6b6;
+$title: #313131;
+$text: #b6b6b6;
 
-    --linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
+$linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
+//Fonts
+@font-face {
+    font-family: 'Inter-Medium';
+    src:  url('../fontes/Inter-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'Inter-Regular';
+    src:  url('../fontes/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'LexendDeca-Regular';
+    src:  url('../fontes/LexendDeca-Regular.ttf');
+}
+
+//Styles
 * {
     margin: 0;
     padding: 0;
@@ -23,51 +38,78 @@ body {
     background-color: #e5e5e5;
 }
 
+@mixin displayAlign($display, $justify, $align){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+i {
+    cursor:pointer;
+    padding:10px 12px 8px;
+    background:#fff;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 0 15px;
+    color:#aaa;
+    transition:.2s;
+  }
+  
+  i:hover {
+    color:#666;
+  }
+  
+  i:before {
+    font-family:'fontawesome';
+    content:'\f004';
+    font-style:normal;
+  }
+
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include displayAlign(flex, center , center);
     width: 100vw;
-    height: 20vh;
-    background-color: var(--blue);
+    height: 30vh;
+    background-image: $linear;
     margin-bottom: 10vh;
 
     .container {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        height: 13vh;
+        height: 20vh;
         max-width: 980px;
 
         .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include displayAlign(flex, space-between , center);
             width: 100vw;
             max-width: 980px;
+            font-family: 'Inter-Regular';
         }
 
         .search {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include displayAlign(flex, center , center);
             flex-direction: row;
-            background-color: #ffffff95;
+            background-color: #ffffff50;
             border: none;
             border-radius: 3px;
             height: 4.5rem;
-            width: 100vw;
+            width: 100%;
             max-width: 980px;
 
+            ::placeholder{
+                color:#FFFFFF90;
+            }
+
             img {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include displayAlign(flex, center , center);
                 width: 16px;
                 height: 16px;
                 margin: 0 1.5rem;
             }
 
+            .search-bar:focus{
+                outline: none;
+            }
             .search-bar {
                 border: none;
                 border-radius: 3px;
@@ -75,6 +117,8 @@ header {
                 width: 100vw;
                 max-width: 980px;
                 background-color: transparent;
+                color: white;
+                outline: none;
 
                 ::placeholder {
                     color: white;
@@ -85,18 +129,14 @@ header {
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include displayAlign(flex, center , center);
 
     .post-section {
         max-width: 980px;
 
         .container {
             height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include displayAlign(flex, center , center);
             flex-direction: column;
             max-width: 980px;
             width: 100vw;
@@ -113,31 +153,45 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: var(--title);
-            font-size: 1.6rem;
+            color: $title;
+            font-size: 1.4rem;
             }
 
             h2{
-                font-size: 2.2rem;
+                font-size: 2rem;
                 padding: 1rem 0;
                 align-self: flex-start;
-                color: var(--title);
+                color: $title;
+                font-family: 'Inter-Medium';
             }
 
             p{
-                font-size: 1.6rem;
+                font-size: 1.4rem;
                 align-self: flex-start;
-                color: var(--text);
+                color: $text;
+                font-family: 'LexendDeca-Regular';
             }
 
             .date, .icon{
-                color: var(--text);
+                font-family: 'Inter-Regular';
+                color: $text;
+            }
+
+            .icon{
+                cursor: pointer;
+                width: 16px;
+                height: 16px;
+                background: url("../images/heart.svg") no-repeat;
+                background-position: center;
+                background-size: cover;
+                overflow: hidden;
+                background-blend-mode: overlay;
             }
         }
     }
 }
 
 span {
-    color: var(--white);
+    color: $white;
     font-size: 24px;
 }
