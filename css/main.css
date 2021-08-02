@@ -197,7 +197,15 @@ main .post-section {
   max-width: 980px;
 }
 
-main .post-section .container {
+main .post-section ul {
+  list-style: none;
+}
+
+main .post-section ul li {
+  margin-bottom: 2rem;
+}
+
+main .post-section .card {
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,12 +224,14 @@ main .post-section .container {
   width: 100vw;
   background-color: white;
   padding: 2rem;
+  margin-bottom: 2rem;
   border-radius: 3px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
 }
 
-main .post-section .container .top-card {
+main .post-section .card .top-card {
   padding: 0 2rem;
   max-width: 980px;
   width: 100vw;
@@ -239,7 +249,7 @@ main .post-section .container .top-card {
   font-size: 1.4rem;
 }
 
-main .post-section .container h2 {
+main .post-section .card .title {
   font-size: 2rem;
   padding: 1rem 0;
   -ms-flex-item-align: start;
@@ -248,7 +258,7 @@ main .post-section .container h2 {
   font-family: 'Inter-Medium';
 }
 
-main .post-section .container p {
+main .post-section .card .description {
   font-size: 1.4rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -256,12 +266,12 @@ main .post-section .container p {
   font-family: 'LexendDeca-Regular';
 }
 
-main .post-section .container .date, main .post-section .container .icon {
+main .post-section .card .date, main .post-section .card .icon {
   font-family: 'Inter-Regular';
   color: #b6b6b6;
 }
 
-main .post-section .container .icon {
+main .post-section .card .icon {
   cursor: pointer;
   width: 16px;
   height: 16px;

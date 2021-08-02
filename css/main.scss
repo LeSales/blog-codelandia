@@ -134,7 +134,15 @@ main {
     .post-section {
         max-width: 980px;
 
-        .container {
+        ul{
+            list-style: none;
+            
+            li{
+                margin-bottom: 2rem;;
+            }
+        }
+
+        .card {
             height: auto;
             @include displayAlign(flex, center , center);
             flex-direction: column;
@@ -142,8 +150,10 @@ main {
             width: 100vw;
             background-color: white;
             padding: 2rem;
+            margin-bottom: 2rem;
             border-radius: 3px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            cursor: pointer;
 
             .top-card{
             padding:0 2rem;
@@ -157,7 +167,7 @@ main {
             font-size: 1.4rem;
             }
 
-            h2{
+            .title{
                 font-size: 2rem;
                 padding: 1rem 0;
                 align-self: flex-start;
@@ -165,7 +175,7 @@ main {
                 font-family: 'Inter-Medium';
             }
 
-            p{
+            .description{
                 font-size: 1.4rem;
                 align-self: flex-start;
                 color: $text;
