@@ -97,6 +97,10 @@ header .container .header-top {
   font-family: 'Inter-Regular';
 }
 
+header .container .header-top span {
+  font-size: 2.4rem;
+}
+
 header .container .search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,5 +289,29 @@ main .post-section .card .icon {
 span {
   color: #fff;
   font-size: 24px;
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 50%;
+  }
+  header {
+    height: 20vh;
+  }
+  header .container {
+    height: 15vh;
+  }
+  header .container .header-top {
+    max-width: 80vw;
+  }
+  header .container .search {
+    max-width: 80vw;
+  }
+  main .post-section .card {
+    max-width: 80vw;
+  }
+  main .post-section .card .top-card {
+    max-width: 80vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */

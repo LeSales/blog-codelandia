@@ -5,7 +5,7 @@ const blogSections = [
     {
         id:1,
         title: "Title 1",
-        description: "Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1",
+        description: "Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1",
         date: "date",
         like: false
     },

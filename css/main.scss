@@ -84,6 +84,10 @@ header {
             width: 100vw;
             max-width: 980px;
             font-family: 'Inter-Regular';
+
+            span{
+                font-size: 2.4rem;
+            }
         }
 
         .search {
@@ -204,4 +208,33 @@ main {
 span {
     color: $white;
     font-size: 24px;
+}
+
+
+@media (max-width:1050px){
+    html{
+        font-size: 50%;
+    }
+
+    header{
+        height: 20vh;
+        .container{
+            height:15vh;
+        .header-top{
+            max-width: 80vw;
+        }
+        .search{
+            max-width: 80vw;
+        }
+        }
+    }
+
+    main .post-section .card{
+        max-width: 80vw;
+
+        .top-card{
+            max-width: 80vw;
+        }
+    }
+
 }
