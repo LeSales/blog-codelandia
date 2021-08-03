@@ -201,14 +201,6 @@ main .post-section {
   max-width: 980px;
 }
 
-main .post-section ul {
-  list-style: none;
-}
-
-main .post-section ul li {
-  margin-bottom: 2rem;
-}
-
 main .post-section .card {
   height: auto;
   display: -webkit-box;
@@ -251,6 +243,10 @@ main .post-section .card .top-card {
           align-items: center;
   color: #313131;
   font-size: 1.4rem;
+}
+
+main .post-section .card .top-card .red {
+  color: red;
 }
 
 main .post-section .card .title {

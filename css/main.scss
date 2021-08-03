@@ -138,14 +138,6 @@ main {
     .post-section {
         max-width: 980px;
 
-        ul{
-            list-style: none;
-            
-            li{
-                margin-bottom: 2rem;;
-            }
-        }
-
         .card {
             height: auto;
             @include displayAlign(flex, center , center);
@@ -169,6 +161,11 @@ main {
             align-items: center;
             color: $title;
             font-size: 1.4rem;
+
+            .red{
+                color: red;
+            }
+
             }
 
             .title{
