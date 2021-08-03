@@ -185,7 +185,7 @@ header .container .search .search-bar ::placeholder {
   color: white;
 }
 
-main {
+.blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,13 +195,14 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100vw;
 }
 
-main .post-section {
+.blog .post-section {
   max-width: 980px;
 }
 
-main .post-section .card {
+.blog .post-section .card {
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,7 +218,7 @@ main .post-section .card {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 980px;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -227,7 +228,7 @@ main .post-section .card {
   cursor: pointer;
 }
 
-main .post-section .card .top-card {
+.blog .post-section .card .top-card {
   padding: 0 2rem;
   max-width: 980px;
   width: 100vw;
@@ -245,11 +246,7 @@ main .post-section .card .top-card {
   font-size: 1.4rem;
 }
 
-main .post-section .card .top-card .red {
-  color: red;
-}
-
-main .post-section .card .title {
+.blog .post-section .card .title {
   font-size: 2rem;
   padding: 1rem 0;
   -ms-flex-item-align: start;
@@ -258,7 +255,7 @@ main .post-section .card .title {
   font-family: 'Inter-Medium';
 }
 
-main .post-section .card .description {
+.blog .post-section .card .description {
   font-size: 1.4rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -266,12 +263,12 @@ main .post-section .card .description {
   font-family: 'LexendDeca-Regular';
 }
 
-main .post-section .card .date, main .post-section .card .icon {
+.blog .post-section .card .date, .blog .post-section .card .icon {
   font-family: 'Inter-Regular';
   color: #b6b6b6;
 }
 
-main .post-section .card .icon {
+.blog .post-section .card .icon {
   cursor: pointer;
   width: 16px;
   height: 16px;
@@ -303,10 +300,10 @@ span {
   header .container .search {
     max-width: 80vw;
   }
-  main .post-section .card {
+  .blog .post-section .card {
     max-width: 80vw;
   }
-  main .post-section .card .top-card {
+  .blog .post-section .card .top-card {
     max-width: 80vw;
   }
 }
