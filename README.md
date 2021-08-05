@@ -17,4 +17,11 @@ O desafio consiste em criar um blog dividido em 3 partes:
 
 <image src="https://raw.githubusercontent.com/LeSales/blog-codelandia/main/images/desafio1-2.PNG">
 
-### Parte 3 - Animação: Não iniciada.
+### Parte 3 - Animação: Finalizada!!.</br>
+
+## Features
+Após a conclusão do desafio, resolvi dar uma nova cara ao blog, utilizando a <a href="https://developer.marvel.com/" target="_blank">API da Marvel</a> trazendo a nova funcionalidade de pesquisar personagens.
+
+### Preview 
+
+<image src="https://raw.githubusercontent.com/LeSales/blog-codelandia/main/images/desafio-api-marvel.PNG">
