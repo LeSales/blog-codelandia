@@ -230,17 +230,17 @@ header .container .search .search-bar ::placeholder {
           flex-direction: row;
   max-width: 980px;
   width: 100vw;
-  background-color: #202020;
+  background-color: #fffef2;
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 3px;
-  border-top-left-radius: 10rem;
+  border: 3px solid #383838;
   border-bottom-right-radius: 10rem;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
-  border-bottom: 1px solid #701f1f;
-  border-top: 1px solid #701f1f;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .blog .post-section .card .hero-img {
@@ -252,7 +252,6 @@ header .container .search .search-bar ::placeholder {
           justify-content: flex-start;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  border-top-left-radius: 8rem;
   height: 15rem;
   width: 15rem;
   min-width: 15rem;
@@ -261,10 +260,25 @@ header .container .search .search-bar ::placeholder {
 .blog .post-section .card .content {
   padding: 0 2rem;
   width: 100%;
-  height: 15rem;
+  min-height: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
 }
 
 .blog .post-section .card .content .top-card {
+  top: 0;
   max-width: 980px;
   width: 100%;
   height: auto;
@@ -274,10 +288,11 @@ header .container .search .search-bar ::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #eeeeee;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  vertical-align: top;
+  color: #1f1f1f;
   font-size: 1.4rem;
 }
 
@@ -286,7 +301,8 @@ header .container .search .search-bar ::placeholder {
   padding: 1rem 0;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  color: #eeeeee;
+  vertical-align: top;
+  color: #1f1f1f;
   font-family: 'Inter-Medium';
 }
 
@@ -294,24 +310,18 @@ header .container .search .search-bar ::placeholder {
   font-size: 1.4rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  color: #b6b6b6;
+  color: #272727;
   font-family: 'LexendDeca-Regular';
+  height: auto;
+  min-height: 100%;
 }
 
-.blog .post-section .card .content .date, .blog .post-section .card .content .icon {
+.blog .post-section .card .content .date {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: relative;
   font-family: 'Inter-Regular';
-  color: #b6b6b6;
-}
-
-.blog .post-section .card .content .icon {
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  background: url("../images/heart.svg") no-repeat;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
-  background-blend-mode: overlay;
+  color: #272727;
 }
 
 span {

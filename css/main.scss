@@ -3,8 +3,8 @@ $blue: #3ea1db;
 $blue-dark: #574ae8;
 $white: #fff;
 
-$title: #eeeeee;
-$text: #b6b6b6;
+$title: #1f1f1f;
+$text: #272727;
 
 $linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
 //Fonts
@@ -153,22 +153,20 @@ header {
             flex-direction: row;
             max-width: 980px;
             width: 100vw;
-            background-color: rgb(32, 32, 32);
+            background-color: rgb(255, 254, 242);
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 3px;
-            border-top-left-radius:10rem;
+            border: 3px solid rgb(56, 56, 56);
             border-bottom-right-radius:10rem ;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             cursor: pointer;
-            border-bottom: 1px solid rgb(112, 31, 31);
-            border-top: 1px solid rgb(112, 31, 31);
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
             .hero-img{
                 display: flex;
                 justify-content: flex-start;
                 align-self: flex-start;
-                border-top-left-radius:8rem;
                 height: 15rem;
                 width: 15rem;
                 min-width: 15rem;
@@ -177,14 +175,21 @@ header {
             .content{
                 padding:0 2rem;
                 width: 100%;
-                height: 15rem;
+                min-height: 15rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                height: auto;
                 .top-card{
+                    top:0;
                     max-width: 980px;
                     width: 100%;
                     height: auto;
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
+                    align-items: flex-start;
+                    vertical-align: top;
                     color: $title;
                     font-size: 1.4rem;
                     }
@@ -193,6 +198,7 @@ header {
                         font-size: 2rem;
                         padding: 1rem 0;
                         align-self: flex-start;
+                        vertical-align: top;
                         color: $title;
                         font-family: 'Inter-Medium';
                     }
@@ -202,22 +208,15 @@ header {
                         align-self: flex-start;
                         color: $text;
                         font-family: 'LexendDeca-Regular';
+                        height: auto;
+                        min-height: 100%;
                     }
         
-                    .date, .icon{
+                    .date{
+                        align-self: flex-start;
+                        position: relative;
                         font-family: 'Inter-Regular';
                         color: $text;
-                    }
-        
-                    .icon{
-                        cursor: pointer;
-                        width: 16px;
-                        height: 16px;
-                        background: url("../images/heart.svg") no-repeat;
-                        background-position: center;
-                        background-size: cover;
-                        overflow: hidden;
-                        background-blend-mode: overlay;
                     }
 
             }
