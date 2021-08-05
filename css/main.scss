@@ -3,7 +3,7 @@ $blue: #3ea1db;
 $blue-dark: #574ae8;
 $white: #fff;
 
-$title: #313131;
+$title: #eeeeee;
 $text: #b6b6b6;
 
 $linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
@@ -35,7 +35,17 @@ html {
 }
 
 body {
-    background-color: #e5e5e5;
+    //background-color: #bebebe;
+    background:rgba(0, 0, 0, 0.1) url("../images/background.jpg");
+    overflow-x: hidden;
+    //background-blend-mode: overlay;
+    //background-size: auto 100vw;
+
+    .background{
+        width: 100%;
+        min-height: 100vh;
+        background-color: #00000050;
+    }
 }
 
 @mixin displayAlign($display, $justify, $align){
@@ -44,32 +54,24 @@ body {
     align-items: $align;
 }
 
-i {
-    cursor:pointer;
-    padding:10px 12px 8px;
-    background:#fff;
-    border-radius:50%;
-    display:inline-block;
-    margin:0 0 15px;
-    color:#aaa;
-    transition:.2s;
-  }
-  
-  i:hover {
-    color:#666;
-  }
-  
-  i:before {
-    font-family:'fontawesome';
-    content:'\f004';
-    font-style:normal;
+  .loader{
+    
+    @include displayAlign(flex, center , center);
+    width: 100vw;
+      border-radius: 500px;
+      position:fixed;
+      overflow: hidden;
+      img{
+        width: 20vw;
+        border-radius: 5000px;
+      }
   }
 
 header {
     @include displayAlign(flex, center , center);
     width: 100vw;
     height: 30vh;
-    background-image: $linear;
+    background-color: rgb(24, 22, 22);
     margin-bottom: 10vh;
 
     .container {
@@ -78,6 +80,13 @@ header {
         flex-direction: column;
         height: 20vh;
         max-width: 980px;
+
+        background: url("../images/Marvel.png");
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: center;
+    overflow: hidden;
+    background-blend-mode: overlay;
 
         .header-top {
             @include displayAlign(flex, space-between , center);
@@ -141,58 +150,78 @@ header {
         .card {
             height: auto;
             @include displayAlign(flex, center , center);
-            flex-direction: column;
+            flex-direction: row;
             max-width: 980px;
-            width: 100%;
-            background-color: white;
+            width: 100vw;
+            background-color: rgb(32, 32, 32);
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 3px;
+            border-top-left-radius:10rem;
+            border-bottom-right-radius:10rem ;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             cursor: pointer;
+            border-bottom: 1px solid rgb(112, 31, 31);
+            border-top: 1px solid rgb(112, 31, 31);
 
-            .top-card{
-            padding:0 2rem;
-            max-width: 980px;
-            width: 100vw;
-            height: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: $title;
-            font-size: 1.4rem;
-            }
-
-            .title{
-                font-size: 2rem;
-                padding: 1rem 0;
+            .hero-img{
+                display: flex;
+                justify-content: flex-start;
                 align-self: flex-start;
-                color: $title;
-                font-family: 'Inter-Medium';
+                border-top-left-radius:8rem;
+                height: 15rem;
+                width: 15rem;
+                min-width: 15rem;
             }
 
-            .description{
-                font-size: 1.4rem;
-                align-self: flex-start;
-                color: $text;
-                font-family: 'LexendDeca-Regular';
+            .content{
+                padding:0 2rem;
+                width: 100%;
+                height: 15rem;
+                .top-card{
+                    max-width: 980px;
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $title;
+                    font-size: 1.4rem;
+                    }
+        
+                    .title{
+                        font-size: 2rem;
+                        padding: 1rem 0;
+                        align-self: flex-start;
+                        color: $title;
+                        font-family: 'Inter-Medium';
+                    }
+        
+                    .description{
+                        font-size: 1.4rem;
+                        align-self: flex-start;
+                        color: $text;
+                        font-family: 'LexendDeca-Regular';
+                    }
+        
+                    .date, .icon{
+                        font-family: 'Inter-Regular';
+                        color: $text;
+                    }
+        
+                    .icon{
+                        cursor: pointer;
+                        width: 16px;
+                        height: 16px;
+                        background: url("../images/heart.svg") no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        overflow: hidden;
+                        background-blend-mode: overlay;
+                    }
+
             }
 
-            .date, .icon{
-                font-family: 'Inter-Regular';
-                color: $text;
-            }
-
-            .icon{
-                cursor: pointer;
-                width: 16px;
-                height: 16px;
-                background: url("../images/heart.svg") no-repeat;
-                background-position: center;
-                background-size: cover;
-                overflow: hidden;
-                background-blend-mode: overlay;
-            }
         }
     }
 }
@@ -229,4 +258,15 @@ span {
         }
     }
 
+}
+
+.disapear{
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
 }
