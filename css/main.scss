@@ -9,18 +9,18 @@ $text: #272727;
 $linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
 //Fonts
 @font-face {
-    font-family: 'Inter-Medium';
-    src:  url('../fontes/Inter-Medium.ttf');
+    font-family: "Inter-Medium";
+    src: url("../fontes/Inter-Medium.ttf");
 }
 
 @font-face {
-    font-family: 'Inter-Regular';
-    src:  url('../fontes/Inter-Regular.ttf');
+    font-family: "Inter-Regular";
+    src: url("../fontes/Inter-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'LexendDeca-Regular';
-    src:  url('../fontes/LexendDeca-Regular.ttf');
+    font-family: "LexendDeca-Regular";
+    src: url("../fontes/LexendDeca-Regular.ttf");
 }
 
 //Styles
@@ -36,39 +36,38 @@ html {
 
 body {
     //background-color: #bebebe;
-    background:rgba(0, 0, 0, 0.1) url("../images/background.jpg");
+    background: rgba(0, 0, 0, 0.1) url("../images/background.jpg");
     overflow-x: hidden;
     //background-blend-mode: overlay;
     //background-size: auto 100vw;
 
-    .background{
+    .background {
         width: 100%;
         min-height: 100vh;
         background-color: #00000050;
     }
 }
 
-@mixin displayAlign($display, $justify, $align){
+@mixin displayAlign($display, $justify, $align) {
     display: $display;
     justify-content: $justify;
     align-items: $align;
 }
 
-  .loader{
-    
-    @include displayAlign(flex, center , center);
+.loader {
+    @include displayAlign(flex, center, center);
     width: 100vw;
-      border-radius: 500px;
-      position:fixed;
-      overflow: hidden;
-      img{
+    border-radius: 500px;
+    position: fixed;
+    overflow: hidden;
+    img {
         width: 20vw;
         border-radius: 5000px;
-      }
-  }
+    }
+}
 
 header {
-    @include displayAlign(flex, center , center);
+    @include displayAlign(flex, center, center);
     width: 100vw;
     height: 30vh;
     background-color: rgb(24, 22, 22);
@@ -82,25 +81,25 @@ header {
         max-width: 980px;
 
         background: url("../images/Marvel.png");
-    background-repeat: no-repeat;
-    background-size: auto 80%;
-    background-position: center;
-    overflow: hidden;
-    background-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-size: auto 80%;
+        background-position: center;
+        overflow: hidden;
+        background-blend-mode: overlay;
 
         .header-top {
-            @include displayAlign(flex, space-between , center);
+            @include displayAlign(flex, space-between, center);
             width: 100vw;
             max-width: 980px;
-            font-family: 'Inter-Regular';
+            font-family: "Inter-Regular";
 
-            span{
+            span {
                 font-size: 2.4rem;
             }
         }
 
         .search {
-            @include displayAlign(flex, center , center);
+            @include displayAlign(flex, center, center);
             flex-direction: row;
             background-color: #ffffff50;
             border: none;
@@ -109,18 +108,18 @@ header {
             width: 100%;
             max-width: 980px;
 
-            ::placeholder{
-                color:#FFFFFF90;
+            ::placeholder {
+                color: #ffffff90;
             }
 
             img {
-                @include displayAlign(flex, center , center);
+                @include displayAlign(flex, center, center);
                 width: 16px;
                 height: 16px;
                 margin: 0 1.5rem;
             }
 
-            .search-bar:focus{
+            .search-bar:focus {
                 outline: none;
             }
             .search-bar {
@@ -142,14 +141,14 @@ header {
 }
 
 .blog {
-    @include displayAlign(flex, center , center);
+    @include displayAlign(flex, center, center);
     width: 100vw;
     .post-section {
         max-width: 980px;
 
         .card {
             height: auto;
-            @include displayAlign(flex, center , center);
+            @include displayAlign(flex, center, center);
             flex-direction: row;
             max-width: 980px;
             width: 100vw;
@@ -158,12 +157,12 @@ header {
             margin-bottom: 2rem;
             border-radius: 3px;
             border: 3px solid rgb(56, 56, 56);
-            border-bottom-right-radius:10rem ;
+            border-bottom-right-radius: 10rem;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             cursor: pointer;
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
-            .hero-img{
+            .hero-img {
                 display: flex;
                 justify-content: flex-start;
                 align-self: flex-start;
@@ -172,8 +171,8 @@ header {
                 min-width: 15rem;
             }
 
-            .content{
-                padding:0 2rem;
+            .content {
+                padding: 0 2rem;
                 width: 100%;
                 min-height: 15rem;
                 display: flex;
@@ -181,8 +180,8 @@ header {
                 justify-content: flex-start;
                 flex-direction: column;
                 height: auto;
-                .top-card{
-                    top:0;
+                .top-card {
+                    top: 0;
                     max-width: 980px;
                     width: 100%;
                     height: auto;
@@ -192,35 +191,33 @@ header {
                     vertical-align: top;
                     color: $title;
                     font-size: 1.4rem;
-                    }
-        
-                    .title{
-                        font-size: 2rem;
-                        padding: 1rem 0;
-                        align-self: flex-start;
-                        vertical-align: top;
-                        color: $title;
-                        font-family: 'Inter-Medium';
-                    }
-        
-                    .description{
-                        font-size: 1.4rem;
-                        align-self: flex-start;
-                        color: $text;
-                        font-family: 'LexendDeca-Regular';
-                        height: auto;
-                        min-height: 100%;
-                    }
-        
-                    .date{
-                        align-self: flex-start;
-                        position: relative;
-                        font-family: 'Inter-Regular';
-                        color: $text;
-                    }
+                }
 
+                .title {
+                    font-size: 2rem;
+                    padding: 1rem 0;
+                    align-self: flex-start;
+                    vertical-align: top;
+                    color: $title;
+                    font-family: "Inter-Medium";
+                }
+
+                .description {
+                    font-size: 1.4rem;
+                    align-self: flex-start;
+                    color: $text;
+                    font-family: "LexendDeca-Regular";
+                    height: auto;
+                    min-height: 100%;
+                }
+
+                .date {
+                    align-self: flex-start;
+                    position: relative;
+                    font-family: "Inter-Regular";
+                    color: $text;
+                }
             }
-
         }
     }
 }
@@ -230,41 +227,40 @@ span {
     font-size: 24px;
 }
 
-
-@media (max-width:1050px){
-    html{
+@media (max-width: 1050px) {
+    html {
         font-size: 50%;
     }
 
-    header{
+    header {
         height: 20vh;
-        .container{
-            height:15vh;
-        .header-top{
-            max-width: 80vw;
-        }
-        .search{
-            max-width: 80vw;
-        }
+        .container {
+            height: 15vh;
+            .header-top {
+                max-width: 80vw;
+            }
+            .search {
+                max-width: 80vw;
+            }
         }
     }
 
-    .blog .post-section .card{
+    .blog .post-section .card {
         max-width: 80vw;
 
-        .top-card{
+        .top-card {
             max-width: 80vw;
         }
     }
-
 }
 
-.disapear{
+//Efeito usado no load
+.disapear {
     animation: vanish 1s forwards;
 }
 
-@keyframes vanish{
-    100%{
+@keyframes vanish {
+    100% {
         opacity: 0;
         visibility: hidden;
     }
